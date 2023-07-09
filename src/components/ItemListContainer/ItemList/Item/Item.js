@@ -10,7 +10,7 @@ const Item = ({ item }) => {
             <img src={image} alt={name} className="itemImg" />
             <h5> {name} </h5>
             <p> $ {price} </p>
-            <button>Ver mas</button>
+           <button>Ver mas</button>
         </div>
     );
 };
