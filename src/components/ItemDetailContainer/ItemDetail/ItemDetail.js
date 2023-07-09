@@ -2,7 +2,7 @@ import '../../../App.css';
  /* import Counter from './itemCount2'; */
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-
+import CartButtons from '../../CartButtons/CartButtons';
 
 const ItemDetail = ({ product }) => {
     return (
@@ -16,6 +16,7 @@ const ItemDetail = ({ product }) => {
                 <h4>${product.price}</h4>
                 <h5>{product.info}</h5>
             </div>
+            <CartButtons />
         </div>
     )
 }
