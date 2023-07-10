@@ -26,7 +26,7 @@ useEffect(() => {
   }, [categoryId]);
 
 
-    return <div className="item-list"><ItemList  items={productsData} /></div>
+    return <div className='ItemListContainer'><ItemList  items={productsData} /></div>
             
 }
 

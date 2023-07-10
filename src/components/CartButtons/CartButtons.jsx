@@ -1,19 +1,42 @@
 import React, { useContext, useState } from 'react'
 import {CartContext} from "../../context/CartContext"
+import { useParams } from 'react-router-dom'
 const CartButtons = () => {
 
     const [count, setCount] = useContext(CartContext)
     const [state, setState] = useState(0)
 
+    const { productId } = useParams();
+
     const handleMoreClick = () => {
-        setCount(count + 1);
-        setState(state + 1);
-    }
+        if (state === 5) return;
+        setState(state + 1)
+    };
 
     const handleLessClick = () => {
-        setCount(count - 1);
-        setState(state - 1);
+        if (state === 1) return;
+        setState(state - 1)
     }
+
+
+    const addToCart = () => {
+        const existingProduct = count.products.find(
+            (p) => p.productId === productId
+        );
+        if (existingProduct) {
+            existingProduct.qty += state;
+        } else {
+            const newProduct = {
+                productId,
+                qty: state,
+            };
+            setCount((prevState) => ({
+                qtyItems: prevState.qtyItems + state,
+                    products: [...prevState.products, newProduct],
+            }));
+        };
+    };
+
 
   return (
     <div>
@@ -27,7 +50,7 @@ const CartButtons = () => {
             </button>
         </div>
         <div>
-            <button>
+            <button onClick={addToCart}>
                 Agregar al Carrito
             </button>
         </div>
