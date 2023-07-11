@@ -9,6 +9,7 @@ import NavBar from '../components/NavBar/NavBar2/NavBar2.js';
 import ProductDetail from '../Views/ProductDetail.js';
 import Category from '../Views/Category.jsx';
 import CreateProduct from '../Views/CreateProduct.jsx';
+import UpdateProduct from '../Views/UpdateProduct.jsx';
 
 
 const MainRouter = () => {
@@ -24,6 +25,7 @@ const MainRouter = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/category/:categoryId' element={<Category />} />
           <Route path='/create-product' element={<CreateProduct />} />
+          <Route path='/update-product/:userId' element={<UpdateProduct />} />
         </Routes>
       </BrowserRouter>
     )

@@ -1,7 +1,6 @@
 import React from 'react';
 import "../../App.css";
 import ItemList from './ItemList/ItemList.js';
-import { productList } from '../Products/products'
 import {collection, getDocs, getFirestore} from 'firebase/firestore'
 import { useEffect, useState } from 'react';
 

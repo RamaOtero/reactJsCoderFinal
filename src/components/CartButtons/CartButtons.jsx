@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
 import {CartContext} from "../../context/CartContext"
-import { useParams } from 'react-router-dom'
-const CartButtons = () => {
+
+const CartButtons = ({productId}) => {
 
     const [count, setCount] = useContext(CartContext)
     const [state, setState] = useState(0)
 
-    const { productId } = useParams();
+    
 
     const handleMoreClick = () => {
         if (state === 5) return;

@@ -16,7 +16,7 @@ const ItemDetail = ({ product }) => {
                 <h4>${product.price}</h4>
                 <h5>{product.info}</h5>
             </div>
-            <CartButtons />
+            <CartButtons productId={product.id}/>
         </div>
     )
 }

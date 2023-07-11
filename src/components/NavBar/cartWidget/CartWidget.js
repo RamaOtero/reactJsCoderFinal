@@ -8,8 +8,8 @@ const CartWidget = () => {
 
   return (
     <div>
-      <span>{count}</span>
-      <img src={cartImg} />
+      <span>{count.qtyItems}</span>
+      <img alt='cart' src={cartImg} />
     </div>
     
   )
