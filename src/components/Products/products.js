@@ -61,7 +61,7 @@ export const productList = [{
 },
 ];
 
-export const traerProducto = ({userID}) => {
+export const traerProducto = ({itemID}) => {
     return new Promise((resolve, reject) => {
         const productoFiltrado = productList.find((product) => {
             return product.id === userID});

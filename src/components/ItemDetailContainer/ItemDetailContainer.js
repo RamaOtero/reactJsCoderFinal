@@ -6,7 +6,7 @@ import {doc, getDoc, getFirestore} from 'firebase/firestore'
 const ItemDetailContainer = () => {
     const [productListState, setProductListState] = useState([]);
 
-    const { userID } = useParams();
+    const { itemId } = useParams();
     
    /* useEffect(() => {
       setTimeout (() => {
@@ -21,12 +21,12 @@ const ItemDetailContainer = () => {
         
         useEffect(() => {
             const db = getFirestore();
-              const productCollection = doc(db, "products", userID)
+              const productCollection = doc(db, "products", itemId)
               getDoc(productCollection)
               .then((snapshot) => {
                 setProductListState({ id: snapshot.id, ...snapshot.data() });
               });
-                }, [userID]);
+                }, [itemId]);
         
 
 

@@ -25,7 +25,7 @@ const NavBar = () => {
                     <Link to="/contact" className='navBar2__list--link'>Contact</Link>
                     <Link to="/category/hoodie23" className='navBar2__list--link'>Black Hoods</Link>
                     <Link to="/create-product" className='navBar2__list--link'>Create Product</Link>
-                    <Link to="/update-product/:userId" className='navBar2__list--link'>Update Product</Link>
+                    <Link to="/update-product/itemId" className='navBar2__list--link'>Update Product</Link>
                 </ul>
             </div>
                 <div className='navBar__Cart'>

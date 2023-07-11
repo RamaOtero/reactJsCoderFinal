@@ -3,8 +3,8 @@ import {CartContext} from "../../context/CartContext"
 
 const CartButtons = ({productId}) => {
 
-    const [count, setCount] = useContext(CartContext)
     const [state, setState] = useState(0)
+    const [count, setCount] = useContext(CartContext)
 
     
 
