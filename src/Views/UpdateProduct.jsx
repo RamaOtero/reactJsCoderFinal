@@ -1,25 +1,26 @@
 import React from 'react'
 import {doc, getDoc, getFirestore, updateDoc} from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect} from 'react'
 
 const UpdateProduct = () => {
-    const [category, setCategory] = React.useState();
-    const [name, setName] = React.useState();
-    const [info, setInfo] = React.useState();
-    const [price, setPrice] = React.useState();
-    const [stock, setStock] = React.useState();
-    const [productData, setProductData] = React.useState();
+    const [category, setCategory] = useState();
+    const [name, setName] = useState();
+    const [info, setInfo] = useState();
+    const [price, setPrice] = useState();
+    const [stock, setStock] = useState();
+    const [productData, setProductData] = useState();
  
-    const { userID } = useParams();
+    const { itemId } = useParams();
 
-    React.useEffect(() => {
+    useEffect(() => {
         const db = getFirestore();
-              const productCollection = doc(db, "products", userID)
+              const productCollection = doc(db, "products", itemId)
               getDoc(productCollection)
               .then((snapshot) => {
                 setProductData({ id: snapshot.id, ...snapshot.data() });
               });
-    }, [userID])
+    }, [itemId])
 
     const handleCategoryChange = (e) => {
         setCategory(e.target.value);
@@ -47,7 +48,7 @@ const UpdateProduct = () => {
         }
 
         const db = getFirestore();
-        const updateProductCollection = doc(db, "products", userID)
+        const updateProductCollection = doc(db, "products", itemId)
         updateDoc(updateProductCollection, newProduct).then(res => console.log(res));
 
 

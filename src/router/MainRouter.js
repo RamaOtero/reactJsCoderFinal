@@ -25,7 +25,7 @@ const MainRouter = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/category/:categoryId' element={<Category />} />
           <Route path='/create-product' element={<CreateProduct />} />
-          <Route path='/update-product' element={<UpdateProduct />} />
+          <Route path='/update-product/:itemId' element={<UpdateProduct />} />
         </Routes>
       </BrowserRouter>
     )

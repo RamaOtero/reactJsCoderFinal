@@ -1,9 +1,21 @@
 import React from 'react'
 
-const CardDetailCart = () => {
+const CartDetailCard = ({product, qty}) => {
   return (
-    <div>CardDetailCart</div>
+    <div>
+        <div>
+            <div>
+                <img src={product.image} alt={product.name} />
+            </div>
+            <div>
+                <h2>{product.name}</h2>
+                <p>{product.info}</p>
+                <p>precio: ${product.price}</p>
+                <p>cantidad: {qty.qty}</p>
+            </div>
+        </div>
+    </div>
   )
 }
 
-export default CardDetailCart
+export default CartDetailCard

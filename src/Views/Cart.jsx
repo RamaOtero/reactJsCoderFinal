@@ -7,16 +7,16 @@ import CartDetailCard from '../components/CardDetailCart/CardDetailCart.jsx';
 
 const fetchProductsbyIds = async (ids) => {
     const db = getFirestore();
-    const productRefs = ids.map((id) => doc(collection(db, "products", id)));
+    const productRefs = ids.map((id) => doc(collection(db, "products"), id));
 
 
-    const productSnapshot = await Promise.all(
+    const productSnapshots = await Promise.all(
         productRefs.map((productRef) => getDoc(productRef))
     );
 
-    const products = productSnapshot.map((productSnapshot) => {
+    const products = productSnapshots.map((productSnapshot) => {
         if (productSnapshot.exists()) {
-            return { id: productSnapshot.id, ...productSnapshot.data()}
+            return { id: productSnapshot.id, ...productSnapshot.data() }
         } else {
             return null;
         }
