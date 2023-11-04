@@ -13,6 +13,10 @@ const NavBar = () => {
                     <span>
                         PROTOTYPE
                     </span>
+                    
+                    <p>
+                       Be COOL
+                    </p>
                 </div>
             </div>
             <div className='navBar'>
