@@ -22,31 +22,73 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
 }
 
+.logo{
+  font-family:'Unbounded', sans-serif;
+  color: white;
+}
+
+
+.navBar__Name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  align-items: center;
+}
 .navBar__Name span {
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   flex-direction: column;
   font-size: 5.5rem;
-  margin-left: 3%;
   font-family:'Unbounded', sans-serif;
   cursor: default;
   font-weight: 600;
 }
 
-.navBar__Name p {
-  color: rgb(231, 231, 231);
-  margin-left: 3%;
-  text-align: center;
-  font-size: 1.5rem;
-  font-family:bagel fat one;
-  
+.navBar__Name button {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.navBar__Name button:focus,
+.navBar__Name button:hover {
+  color: #fff;
+}
+
+.navBar__Name button:focus:after,
+.navBar__Name button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.navBar__Name button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .navBar__LogoList {
@@ -55,26 +97,49 @@
   margin-left: 5%;
   cursor: pointer;
 }
-.navBar__Cart{
+.navBar__Cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   margin-right: 5%;
   cursor: pointer;
 }
+
 .navBar__list {
   display: flex;
   gap: 10px;
   margin-left: 20px;
   color: white;
   font-family: poppins;
-}
-
-.navBar__list li {
-  cursor: pointer;
-  
+  cursor: default;
 }
 
 .navBar2__list--link {
 text-decoration: none;
+color: whitesmoke;
 }
+
+.homeBanner {
+  position: relative;
+}
+
+.homeBanner video {
+  object-fit: cover;
+}
+
+.homeBanner span {
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  font-family:poppins;
+  font-weight: 100;
+  font-size: 100px;
+  color: whitesmoke;
+  cursor: default;
+}
+
+
 
 .ItemListContainer {
   display: flex;
@@ -173,4 +238,36 @@ text-decoration: none;
   margin:0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 700;
+}
+
+.footer {
+  display:flex;
+  background-color:black;
+  justify-content:start;
+  align-items:center;
+  padding:10px;
+}
+
+.footer span {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-family:'Unbounded', sans-serif;
+  cursor: default;
+  font-weight: 600;
+  margin-left:2%;
+}
+
+.footerList {
+  display:flex;
+  flex-direction:row;
+  gap:10px;
+  margin-left:10%;
+}
+.footerList a{
+  color:white;
+  cursor:pointer;
+  font-family:poppins;
 }

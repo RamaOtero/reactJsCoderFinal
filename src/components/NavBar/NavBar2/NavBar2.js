@@ -1,27 +1,29 @@
 import React from 'react';
 import "../../../App.css";
-import Logo from "../../../Assets/hoodie.png";
 import CartWidget from '../cartWidget/CartWidget.js';
 import { Link } from "react-router-dom";
 
+let scrolldown = () => {
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+
+}
 
 const NavBar = () => {
     return (
         <div>
             <div className='navBar__Back'>
                 <div className='navBar__Name'>
-                    <span>
-                        PROTOTYPE
-                    </span>
-                    
-                    <p>
-                       Be COOL
-                    </p>
+                    <span>  PROTOTYPE  </span>
+                    <button onClick={scrolldown}>  Go Down  </button>
                 </div>
             </div>
             <div className='navBar'>
             <div className='navBar__LogoList'>
-            <Link to="/"> <img src={Logo} alt='Logo'/> </Link>
+            <Link to="/"> <span className='logo'> PROTOTYPE </span> </Link>
                 <ul className='navBar__list'>
                     <Link to="/" className='navBar2__list--link'>Home</Link>
                     <Link to="/news" className='navBar2__list--link' >News</Link>

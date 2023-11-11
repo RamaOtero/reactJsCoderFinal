@@ -10,6 +10,7 @@ import ProductDetail from '../Views/ProductDetail.js';
 import Category from '../Views/Category.jsx';
 import CreateProduct from '../Views/CreateProduct.jsx';
 import UpdateProduct from '../Views/UpdateProduct.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 
 const MainRouter = () => {
@@ -27,6 +28,7 @@ const MainRouter = () => {
           <Route path='/create-product' element={<CreateProduct />} />
           <Route path='/update-product/:itemId' element={<UpdateProduct />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     )
 }
