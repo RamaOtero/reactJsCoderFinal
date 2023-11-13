@@ -10,7 +10,10 @@ const Item = ({ item }) => {
             <img src={image} alt={name} className="itemImg" />
             <h5> {name} </h5>
             <p> $ {price} </p>
-            <Link to={`/update-product/${item.id}`} className='navBar2__list--link'><button>Update product</button></Link>
+            <div>
+                <Link to={`/update-product/${item.id}`} className='navBar2__list--link'><button className="bttnItem">Update</button></Link>
+                <button className="buttonDelete">Delete</button>
+            </div>
         </div>
     );
 };
