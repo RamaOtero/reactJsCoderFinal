@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from './ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
-import {doc, getDoc, getFirestore} from 'firebase/firestore'
+import {doc, getDoc, getFirestore, deleteDoc} from 'firebase/firestore'
+
+
 
 const ItemDetailContainer = () => {
     const [productListState, setProductListState] = useState([]);
+
+
 
     const { itemId } = useParams();
     
@@ -19,6 +23,7 @@ const ItemDetailContainer = () => {
         }, 1000);    
         }, [userID]); */
         
+
         useEffect(() => {
             const db = getFirestore();
               const productCollection = doc(db, "products", itemId)
@@ -28,14 +33,15 @@ const ItemDetailContainer = () => {
               });
                 }, [itemId]);
         
-
+        
+              
 
 
     return (
         <div>
                               
                 <ItemDetail product={productListState} />
-                
+                <button className="buttonDelete">Delete</button>
                 
         </div>
     )}
