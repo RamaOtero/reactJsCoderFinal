@@ -212,7 +212,10 @@ color: whitesmoke;
   margin-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.containerDetail__bttns {
+  display: flex;
+  align-items: center;
+}
 .counter {
   display: grid;
   align-items: center;
@@ -392,6 +395,32 @@ color: whitesmoke;
   
 }
 
+.cartWidget{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: whitesmoke;
+  gap: 5px;
+  font-family: poppins;
+  font-weight: 500;
+}
+
+.cartCard{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  background-color: #0c0c0c;
+  color: #e1e1e1;
+  box-shadow: 10px 10px 20px #121212;
+}
+
+.cartCardImg{
+  width: 20%;
+}
+
 .buttonI {
   --hover-shadows: 16px 16px 33px #121212,
                     -16px -16px 33px #303030;
@@ -473,7 +502,6 @@ color: whitesmoke;
   padding: 15px;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  width: 154px;
   height: 30px;
   color: #fff;
   border: none;
@@ -483,6 +511,11 @@ color: whitesmoke;
   transition: all .3s ease-in-out;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .buttonDelete::before {

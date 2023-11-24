@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Item = ({ item }) => {
+const Item = ({item}) => {
 
     const { name, price, image } = item;
 
@@ -17,7 +17,7 @@ const Item = ({ item }) => {
             <h5> {name} </h5>
             <p> $ {price} </p>
             <div>
-                <Link to={`/update-product/${item.id}`} className='navBar2__list--link'><button className="bttnItem">Update</button></Link>
+            <Link to={`/item/${item.id}`}><button className="bttnItem">Ver Mas</button></Link>
             </div>
         </div>
     );

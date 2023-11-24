@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from './ItemDetail/ItemDetail';
+
 import { useParams } from "react-router-dom";
 import {doc, getDoc, getFirestore, deleteDoc} from 'firebase/firestore'
 
@@ -40,9 +41,8 @@ const ItemDetailContainer = () => {
     return (
         <div>
                               
-                <ItemDetail product={productListState} />
-                <button className="buttonDelete">Delete</button>
-                
+                <ItemDetail itemId={itemId} product={productListState} />
+            
         </div>
     )}
  

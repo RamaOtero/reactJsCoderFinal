@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from 'react'
 import cartImg from '../../../Assets/shopping-cart.png'
 import { CartContext } from '../../../context/CartContext'
 import {Link} from 'react-router-dom'
+import '../../../App.css'
 
 const CartWidget = () => {
   const [qty, setQty] = useState(0);
@@ -12,8 +13,8 @@ const CartWidget = () => {
   }, [count])
 
   return (
-    <div>
-      <Link to="/cart">
+    <div >
+      <Link className='cartWidget' to="/cart">
       <img alt='cart' src={cartImg} />
       <span>{qty}</span>
       </Link>

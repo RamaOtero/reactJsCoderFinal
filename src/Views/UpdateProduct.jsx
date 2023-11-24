@@ -5,6 +5,7 @@ import { useState, useEffect} from 'react'
 import {addDoc, collection} from 'firebase/firestore';
 import {getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import appFirebase from '../credenciales';
+import '../App.css';
 
 const storage = getStorage(appFirebase);
 
@@ -88,14 +89,20 @@ const UpdateProduct = () => {
     }
 
   return (
-    <div>
-        <input type="text" onChange={(e) => handleCategoryChange(e)} placeholder='Category'/>
-        <input type="text" onChange={(e) => handleNameChange(e)} placeholder='Name'/>
-        <input type="text" onChange={(e) => handleStockChange(e)} placeholder='Stock'/>
-        <input type="text" onChange={(e) => handleInfoChange(e)} placeholder='Info'/>
-        <input type="text" onChange={(e) => handlePriceChange(e)} placeholder='Price'/>
-        <input type="file" id='file' placeholder='Actualizar Imagen' onChange={fileHandler} />
-        <button onClick={handleSubmit}>Modificar Producto</button>
+    <div className='formCrearProduct'>
+        <div className='crearProduct'>
+            <div>
+                <input className='input' type="text" onChange={(e) => handleNameChange(e)} placeholder='Name'/>
+                <input className='input' type="text" onChange={(e) => handleCategoryChange(e)} placeholder='Category'/>
+            </div>
+                <input className='input inputInfo' type="text" onChange={(e) => handleInfoChange(e)} placeholder='Info'/>
+            <div>
+                <input className='input' type="text" onChange={(e) => handleStockChange(e)} placeholder='Stock'/>
+                <input className='input' type="text" onChange={(e) => handlePriceChange(e)} placeholder='Price'/>
+            </div>
+        <input className='input' type="file" id='file' placeholder='Actualizar Imagen' onChange={fileHandler} />
+        <button className='buttonI' onClick={handleSubmit}>Modificar Producto</button>
+        </div>
     </div>
   )
 }
