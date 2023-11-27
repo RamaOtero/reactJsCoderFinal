@@ -29,7 +29,7 @@ const NavBar = () => {
                     <Link to="/news" className='navBar2__list--link' >News</Link>
                     <Link to="/aboutUs" className='navBar2__list--link'>About Us</Link>
                     <Link to="/contact" className='navBar2__list--link'>Contact</Link>
-                    <Link to="/category/hoodie23" className='navBar2__list--link'>Black Hoods</Link>
+                    <Link to="/category/hoodie23" className='navBar2__list--link'>Categorys</Link>
                     <Link to="/create-product" className='navBar2__list--link'>Create Product</Link>
                 </ul>
             </div>

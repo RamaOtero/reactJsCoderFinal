@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import {CartContext} from "../../context/CartContext"
+import '../../App.css';
 
 const CartButtons = ({productId}) => {
 
@@ -39,19 +40,19 @@ const CartButtons = ({productId}) => {
 
 
   return (
-    <div>
+    <div className='addCartBttns'>
         <div>
-            <button onClick={handleLessClick}>
+            <button className="bttnItem" onClick={handleLessClick}>
                 -
             </button>
             <span>{state}</span>
-            <button  onClick={handleMoreClick}>
+            <button className="bttnItem"  onClick={handleMoreClick}>
                 +
             </button>
         </div>
         <div>
-            <button onClick={addToCart}>
-                Agregar al Carrito
+            <button className="bttnItem" onClick={addToCart}>
+                Agregar
             </button>
         </div>
     </div>

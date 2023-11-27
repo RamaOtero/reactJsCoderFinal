@@ -42,7 +42,7 @@ const Cart = () => {
 
     return (
         <div>
-            <div>
+            <div className='cart'>
                 {productsData.map((product) => (
                     <CartDetailCard key={product.id} product={product} qty={count.products.find((item) => item.productId === product.id)}/>
                 ))}

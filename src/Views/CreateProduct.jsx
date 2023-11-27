@@ -15,6 +15,7 @@ const CreateProduct = () => {
     
 
     let urlImDesc;
+    
 
     const fileHandler = async (e) => {
         //detect the file 
@@ -24,6 +25,7 @@ const CreateProduct = () => {
         await uploadBytes(refArchivo, archivoI);
         // obtener url de la imagen
         urlImDesc = await getDownloadURL(refArchivo);
+        
     }
 
     
@@ -80,15 +82,15 @@ const CreateProduct = () => {
     <div className='formCrearProduct'>
         <div className='crearProduct'>
             <div>
-            <input className='input' type="text" onChange={(e) => handleNameChange(e)} placeholder='Name'/>
-            <input className='input' type="text" onChange={(e) => handleCategoryChange(e)} placeholder='Category'/>
+            <input autofocus required className='input' type="text" onChange={(e) => handleNameChange(e)} placeholder='Name'/>
+            <input required className='input' type="text" onChange={(e) => handleCategoryChange(e)} placeholder='Category'/>
             </div>
-            <input className='input inputInfo' type="text" onChange={(e) => handleInfoChange(e)} placeholder='Info'/>
+            <input required className='input inputInfo' type="text" onChange={(e) => handleInfoChange(e)} placeholder='Info'/>
             <div>
-            <input className='input' type="text" onChange={(e) => handleStockChange(e)} placeholder='Stock'/>
-            <input className='input' type="text" onChange={(e) => handlePriceChange(e)} placeholder='Price'/>
+            <input required className='input' type="number" min="1" onChange={(e) => handleStockChange(e)} placeholder='Stock'/>
+            <input required className='input' type="number" min="2000" onChange={(e) => handlePriceChange(e)} placeholder='Price'/>
             </div>
-            <input className='input' type="file" id='file' placeholder='Agregar Imagen' onChange={fileHandler} />
+            <input required className='input' type="file" id='file' placeholder='Agregar Imagen' onChange={fileHandler} />
             <button className='buttonI' onClick={handleSubmit}>Crear Producto</button>
         </div>
     </div>
