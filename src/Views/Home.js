@@ -11,7 +11,7 @@ const Home = () => {
         <div className='App.css'>
             <div className='homeBanner'>
                 <video src={Video}  width="100%" height="500" loop autoPlay playsInline muted></video>
-                <span>no pongas límites</span>
+                
             </div>
             <ItemListContainer />
             

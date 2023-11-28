@@ -29,7 +29,15 @@ const NavBar = () => {
                     <Link to="/news" className='navBar2__list--link' >News</Link>
                     <Link to="/aboutUs" className='navBar2__list--link'>About Us</Link>
                     <Link to="/contact" className='navBar2__list--link'>Contact</Link>
-                    <Link to="/category/hoodie23" className='navBar2__list--link'>Categorys</Link>
+                    <li className='categoryList'>
+                        Category
+                        <ul className='navCategorys'>
+                            <li><Link to="/category/black" className='categoryLink'>Black Hoddies</Link></li>
+                            <li><Link to="/category/large" className='categoryLink'>Large Hoddies</Link></li>
+                            <li><Link to="/category/new" className='categoryLink'>New Hoddies</Link></li>
+                        </ul>
+                    </li>
+                    
                     <Link to="/create-product" className='navBar2__list--link'>Create Product</Link>
                 </ul>
             </div>
