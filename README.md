@@ -7,14 +7,16 @@
 <h3>Entrega final para la aprobación del curso del framework Reac Js en Coder House.
   La propuesta consiste en realizar un e-commerce, destinado a nuestro gusto y tratando de abarcar toda la documentación de React.
 </h3>
-<a url="https://reactjs-coderhouse-three.vercel.app/">Deploy</a>👨‍💻
----
-👨‍💻 Lenguages y tecnologías utilizadas:
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" title="HTML5" alt="HTML5" widtg="40" height="40" />   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" title="CSS3" alt="CSS3" widtg="40" height="40" />   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JS" alt="JS" widtg="40" height="40" />
+<div>
+  👨‍💻 Lenguages y tecnologías utilizadas: <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" title="HTML5" alt="HTML5" widtg="40" height="40" />   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" title="CSS3" alt="CSS3" widtg="40" height="40" />   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JS" alt="JS" widtg="40" height="40" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="JS" alt="JS" widtg="40" height="40" /> 
+</div>
 
-## bash
+
+<div align="start">
+
+  ## Bash
 
 - $ git clone https://github.com/RamaOtero/reactJsCoderFinal.git
 - $ cd .\proyecto\
@@ -37,5 +39,7 @@ Para poder utilizar la base de datos conectada con esta app, se deberan completa
 - ItemDetail , ItemDetailConteiner
 - Item,ItemList , ItemListContainer
 - Cart
+
+</div>
 
 </div>
