@@ -1,13 +1,16 @@
-import React from 'react'
-import '../../App.css'
-import eliminar from '../../Assets/eliminar.png'
 
+import React, {useContext} from 'react'
+import '../../App.css'
+import DeleteBttn from './DeleteBttnCart'
+import {doc, getFirestore, deleteDoc, collection} from 'firebase/firestore'
+import { CartContext } from '../../context/CartContext';
 
 const CartDetailCard = ({product, qty}) => {
+  
+  
+  const {count} = useContext(CartContext);
 
-
-
-
+  const productId = product.id
 
   return (
     <div>
@@ -18,7 +21,10 @@ const CartDetailCard = ({product, qty}) => {
                 <p>${product.price}</p>
                 <p>{qty.qty}</p>
             </div>
-            <button><img src={eliminar} /></button>
+           <button onClick={ () => {
+            product = count.map(productId)
+            count.splice(product) 
+           } }>delete</button>
         </div>
     </div>
   )

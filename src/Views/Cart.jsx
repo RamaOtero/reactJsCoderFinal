@@ -3,7 +3,7 @@ import React, {useContext} from 'react'
 import { CartContext } from '../context/CartContext';
 import { collection, getDoc, doc, getFirestore } from 'firebase/firestore';
 import CartDetailCard from '../components/CardDetailCart/CardDetailCart.jsx';
-
+import '../App.css';
 
 const fetchProductsbyIds = async (ids) => {
     const db = getFirestore();
@@ -46,6 +46,7 @@ const Cart = () => {
                 {productsData.map((product) => (
                     <CartDetailCard key={product.id} product={product} qty={count.products.find((item) => item.productId === product.id)}/>
                 ))}
+                <button className='bttnItem'>COMPRAR</button>
             </div>
         </div>
     )
