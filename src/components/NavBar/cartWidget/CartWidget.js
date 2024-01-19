@@ -9,7 +9,7 @@ const CartWidget = () => {
   const {count} = useContext(CartContext);
 
   useEffect(() => {
-    setQty(count.products.reduce((total, product) => total + product.qty, 0))
+    setQty(count.products ? count.products.reduce((total, product) => total + product.qty, 0): 0)
   }, [count])
 
   return (

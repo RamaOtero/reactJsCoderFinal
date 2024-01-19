@@ -1,27 +1,26 @@
 
 import React, {useContext} from 'react'
-import {doc, getFirestore, deleteDoc} from 'firebase/firestore'
 import '../../App.css'
 import { CartContext } from '../../context/CartContext';
-import { collection } from 'firebase/firestore';
+
 
 const DeleteBttn = ({product}) => {
-
-   
+    
+    const {count, setCount} = useContext(CartContext);
+    const eliminar = () =>{
+        count.products.filter((p)=> p.productId !== product.id)
+            setCount(() => ({
+            qtyItems: 0,
+                products:[],
+                }))  
+     }
+       
+       
 
               
     return (
         <div>
-            <button className="buttonDelete" onClick={(product) => {
-                
-                deleteDoc(product)
-                .then(() => {
-                    console.log("Entire Document has been deleted successfully.")
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-            }}>Delete</button>
+            <button className="buttonDelete" product={product} onClick={eliminar}>Delete</button>
         </div>
     )}
  

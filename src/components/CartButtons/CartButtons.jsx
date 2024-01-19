@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState} from 'react'
 import {CartContext} from "../../context/CartContext"
 import '../../App.css';
 
@@ -24,20 +24,25 @@ const CartButtons = ({productId}) => {
         const existingProduct = count.products.find(
             (p) => p.productId === productId
         );
+        console.log(existingProduct)
         if (existingProduct) {
-            existingProduct.qty += state;
+                
+                 existingProduct.qty += state
+                 setCount((prevState) => ({
+                    qtyItems: prevState.qtyItems + state,
+                        products: [...prevState.products],
+            }));
         } else {
             const newProduct = {
                 productId,
                 qty: state,
             };
             setCount((prevState) => ({
-                qtyItems: prevState.qtyItems + state,
-                    products: [...prevState.products, newProduct],
-            }));
+                        qtyItems: prevState.qtyItems + state,
+                            products: [...prevState.products, newProduct],
+                }));
         };
     };
-
 
   return (
     <div className='addCartBttns'>
@@ -59,4 +64,4 @@ const CartButtons = ({productId}) => {
   )
 }
 
-export default CartButtons
+export default CartButtons 

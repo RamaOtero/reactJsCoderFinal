@@ -1,16 +1,12 @@
 
-import React, {useContext} from 'react'
+import React from 'react'
 import '../../App.css'
-import DeleteBttn from './DeleteBttnCart'
-import {doc, getFirestore, deleteDoc, collection} from 'firebase/firestore'
-import { CartContext } from '../../context/CartContext';
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 const CartDetailCard = ({product, qty}) => {
-  
-  
-  const {count} = useContext(CartContext);
 
-  const productId = product.id
+  const {count, setCount} = useContext(CartContext)
 
   return (
     <div>
@@ -21,10 +17,11 @@ const CartDetailCard = ({product, qty}) => {
                 <p>${product.price}</p>
                 <p>{qty.qty}</p>
             </div>
-           <button onClick={ () => {
-            product = count.map(productId)
-            count.splice(product) 
-           } }>delete</button>
+            <button onClick={()=>{
+              setCount(
+                count.products.filter(product => product.id !== count.products.productId )
+              )
+            }}>Delete</button>
         </div>
     </div>
   )
